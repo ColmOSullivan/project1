@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/setup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/77fbeab9e1.js"
       crossorigin="anonymous"
@@ -12,141 +19,188 @@
     <title>Project1-Colm O'Sullivan</title>
   </head>
   <body>
-    <header class="flexContainer">
-      <div>
-        <nav class="navBar wrapper">
-          <ul>
-            <li><a href="#"></a>Home</li>
-            <li><a href="#"></a>About</li>
-            <li><a href="#"></a>Blog</li>
-            <li><a href="#"></a>Contact</li>
-          </ul>
-        </nav>
+    <!-- HEADER -->
+    <header>
+      <div class="mainHeader flexContainer">
+        <div class="wrapper">
+          <nav class="navBar">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <!-- .navBar ends -->
+          <div class="heroContainer">
+            <div class="heroHead">
+              <h1>Under the sea</h1>
+            </div>
+            <div class="heroImg">
+              <img src="./assets/images/home-box-gold.png" alt="" />
+            </div>
+          </div>
+          <!-- .heroContainer ends -->
+        </div>
+        <!-- .wrapper  ends -->
       </div>
     </header>
-
-    <section class="heroContent">
-      <div>
-        <h1 class="wrapper logo">Under the sea</h1>
-      </div>
-      <div>
-        <img
-          class="headerFish"
-          src="./assets/images/home-box-gold.png"
-          alt="three gold fish swimming in an aquarium"
-        />
-      </div>
-    </section>
+    <!-- HEADER .flexContainer ends -->
 
     <main>
-      <section class="wrapper">
-        <div class="about"></div>
-        <h2>What is under the sea</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, optio
-          ipsam deserunt cupiditate libero facere neque nostrum ex. Accusantium
-          dolorum molestiae nemo maiores eaque, recusandae enim sequi
-          perspiciatis quisquam dolor.
-        </p>
-        <a class="findButton" href="#">Find out more</a>
-      </section>
-      <section class="wrapper">
-        <div>
-          <img
-            src="./assets/images/left-image.jpg"
-            alt="A person looking into an aquarium full of different fish"
-          />
-        </div>
-        <div>
-          <h3>New additions</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Exercitationem fugit nam labore corrupti perspiciatis soluta
-            incidunt optio, iure consequuntur id tenetur alias sed mollitia
-            aperiam eos architecto amet a modi?
-          </p>
-          <a class="readButton" href="#">Read more</a>
-        </div>
-        <div>
-          <h3>Meet real Nemo</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-            accusamus! Modi ipsa quidem ducimus, similique possimus excepturi
-            debitis dolorem sapiente, porro consequuntur earum amet minus odio
-            illo commodi officia deserunt?
-          </p>
-          <a class="readButton" href="#">Read more</a>
-        </div>
-        <div>
-          <img
-            src="./assets/images/right-image.jpg"
-            alt="A single clown fish swimming"
-          />
-        </div>
-      </section>
-
-      <section class="wrapper">
-        <div>
-          <div>
-            <i class="fa-thin fa-circle-location-arrow"></i>
-            <h3>Locations</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur alias nesciunt harum atque autem.
-            </p>
-          </div>
-
-          <div>
-            <i class="fa-solid fa-users"></i>
-            <h3>Community</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo id
-              recusandae at perferendis, ipsam eius nemo.
-            </p>
-          </div>
-
-          <div>
-            <i class="fa-solid fa-file"></i>
-            <h3>Blog</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus harum dolor veritatis tenetur a aspernatur magni
-              explicabo laudantium.
-            </p>
-          </div>
-
-          <div>
-            <i class="fa-solid fa-phone-flip"></i>
-            <h3>Get in touch</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
-              quisquam consequatur quod repellat laborum reiciendis aliquid
-              tenetur.
-            </p>
+      <section id="about" class="aboutSection">
+        <div class="wrapper">
+          <div class="aboutContainer">
+            <div class="aboutText">
+              <h3>What is under the sea</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
+                optio ipsam deserunt cupiditate libero facere neque nostrum ex.
+                Accusantium dolorum molestiae nemo maiores eaque, recusandae
+                enim sequi perspiciatis quisquam dolor.
+              </p>
+              <a class="findButton" href="./blog.html">Find out more</a>
+            </div>
           </div>
         </div>
+        <!-- .wrapper end -->
       </section>
 
-      <div class="sharkBreak"></div>
-
-      <section>
-        <div>
-          <img
-            src="./assets/images/small-box.jpg"
-            alt="several fish in an aquarium dappled with light"
-          />
+      <section class="newsSection">
+        <div class="wrapper">
+          <div class="newsContainer">
+            <div class="newsBox">
+              <div class="imageContainer leftImage">
+                <img
+                  src="./assets/images/left-image.jpg"
+                  alt="A person looking into an aquarium full of different fish"
+                />
+              </div>
+              <!-- .imageContainer and leftImage ends -->
+              <div class="newsText">
+                <h4>New additions</h4>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Exercitationem fugit nam labore corrupti perspiciatis soluta
+                  incidunt optio, iure consequuntur id tenetur alias sed
+                  mollitia aperiam eos architecto amet a modi?
+                </p>
+                <a class="readButton" href="#">Read more</a>
+              </div>
+              <!-- .newsText ends -->
+              <div class="newsText rightBox">
+                <h4>Meet real Nemo</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
+                  accusamus! Modi ipsa quidem ducimus, similique possimus
+                  excepturi debitis dolorem sapiente, porro consequuntur earum
+                  amet minus odio illo commodi officia deserunt?
+                </p>
+                <a class="readButton" href="#">Read more</a>
+              </div>
+              <!-- .newsText ends -->
+              <div class="imageContainer rightImage">
+                <img
+                  src="./assets/images/right-image.jpg"
+                  alt="A single clown fish swimming"
+                />
+              </div>
+              <!-- .imageContainer and rightImage ends -->
+            </div>
+            <!-- .newsBox ends -->
+          </div>
+          <!-- .newsContainer ends -->
         </div>
-        <div>
-          <h2>This month profile</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
-            temporibus eius incidunt tenetur earum dolorem minus consequatur,
-            esse eaque hic expedita nemo blanditiis iste? Assumenda veritatis
-            labore officia voluptates itaque.
-          </p>
-          <a class="findButton" href="">Find out more</a>
-        </div>
+        <!-- .wrapper -->
       </section>
+      <!-- .newsSection ends  -->
+
+      <section class="iconSection">
+        <div class="wrapper">
+          <div class="iconContainer">
+            <div class="flexIcon">
+              <i class="fa-solid fa-location-arrow"></i>
+              <div class="iconText">
+                <h4>Locations</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequuntur alias nesciunt harum atque autem.
+                </p>
+              </div>
+              <!-- .iconText ends -->
+            </div>
+            <!-- .flexIcon ends -->
+            <div class="flexIcon">
+              <i class="fa-solid fa-users"></i>
+              <div class="iconText">
+                <h4>Community</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo
+                  id recusandae at perferendis, ipsam eius nemo.
+                </p>
+              </div>
+              <!-- .iconText ends -->
+            </div>
+            <!-- .flexIcon ends -->
+            <div class="flexIcon">
+              <i class="fa-solid fa-file"></i>
+              <div class="iconText">
+                <h4>Blog</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatibus harum dolor veritatis tenetur a aspernatur magni
+                  explicabo laudantium.
+                </p>
+              </div>
+              <!-- .iconText ends -->
+            </div>
+            <!-- .flexIcon ends -->
+            <div class="flexIcon">
+              <i class="fa-solid fa-phone-flip"></i>
+              <div class="iconText">
+                <h4>Get in touch</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde
+                  quisquam consequatur quod repellat laborum reiciendis aliquid
+                  tenetur.
+                </p>
+              </div>
+            </div>
+            <!-- .flexIcon ends -->
+          </div>
+          <!-- .iconContainer ends -->
+        </div>
+        <!-- .wrapper ends -->
+      </section>
+
+      <section class="sharkBreak"></section>
+
+      <section class="profileSection">
+        <div class="wrapper">
+          <div class="profileContainer">
+            <div class="profileImage">
+              <img
+                src="./assets/images/small-box.jpg"
+                alt="several fish in an aquarium dappled with light"
+              />
+            </div>
+            <!-- .profileImage ends -->
+            <div class="profileText">
+              <h3>This month profile</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Excepturi temporibus eius incidunt tenetur earum dolorem minus
+                consequatur, esse eaque hic expedita nemo blanditiis iste?
+                Assumenda veritatis labore officia voluptates itaque.
+              </p>
+              <a class="findButton" href="./blog.html">Find out more</a>
+            </div>
+          </div>
+          <!-- .profileContainer ends -->
+        </div>
+        <!-- .wrapper end -->
+      </section>
+      <!-- .profileSection end -->
 
       <section class="wrapper">
         <div class="cardContainer">

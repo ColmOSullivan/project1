@@ -1,6 +1,82 @@
 @use "partials/variables" as *;
-@use "partials/setup";
 @use "partials/typography";
 @use "partials/mediaQueries";
-@use "partials/baseStyles";
+@use "partials/headerStyles";
+@use "partials/aboutSection";
+@use "partials/newsSection";
+@use "partials/iconsSection";
+@use "partials/sharkBreak";
 
+.wrapper{
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+.flexContainer {
+  display: flex;
+}
+
+// button styling
+a{
+  &.findButton{
+      color: $primaryColor;
+      background-color: $blueBox;
+      padding: 10px 20px;
+      margin: 20px 0;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      border: none;
+      transition: 0.3s;
+      &:hover{
+          background-color: $secondaryColor;
+          color: $white;
+      }
+      &:focus{
+          background-color: $primaryColor;
+          color: $white;
+      }
+  }
+}
+
+a{
+  &.readButton{
+      color: $white;
+      background-color: $primaryColor;
+      padding: 10px 20px;
+      margin: 20px 0;
+      font-size: 20px;
+      text-transform: uppercase;
+      text-align: center;
+      border: none;
+      transition: 0.3s;
+      &:hover{
+          background-color: $blueBox;
+          color: $white;
+      }
+      &:focus{
+          background-color: $blueBox;
+          color: $white;
+      }
+  }
+}
+/* UTILITY CLASSES END */
+
+html {
+  font-size: 125%;
+}
+
+body,
+ul,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  
+}
+section {
+  padding: 100px 0 50px 0;
+}

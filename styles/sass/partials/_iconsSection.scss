@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+.iconSection{
+    background-color: $primaryColor;
+    padding-bottom: 50px;
+}
+
+.iconContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.iconContainer .flexIcon{
+    width: 45%;
+  display: flex;
+}
+
+.iconContainer .flexIcon i{
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+i {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 20px 20px;
+    height: 60px;
+    background-color: $blueBox;
+    color: $primaryColor;
+    font-size: 25px;
+  }

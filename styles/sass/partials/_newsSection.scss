@@ -1,0 +1,59 @@
+@use "variables" as *;
+
+.newsSection {
+    background-color: $secondaryColor;
+}
+
+.newsSection .newsBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+// news content image sizing
+.newsBox .imageContainer{
+    width: 45%;
+}
+
+.newsBox .imageContainer img{
+    width: 100%;
+}
+
+// left image box, shadow and positioning
+
+.newsSection .newsBox .leftImage{
+    position: relative;
+  top: -150;
+  left: -100;
+}
+
+.leftImage img{
+    box-shadow: 30px 30px $blueBox;
+}
+
+.rightImage img{
+    box-shadow: -30px 30px 0px 0px $blueBox;
+}
+
+
+// text box styling and sizing
+.newsText{
+    width: 45%;
+}
+
+// .newsText h4{
+//     font-size: 32px;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+//     margin: 20px 0;
+// }
+
+.newsText p{
+    margin: 20px 0 30px;
+    line-height: 32px;
+}
+
+.rightBox{
+    text-align: right;
+}
