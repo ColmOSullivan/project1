@@ -24,12 +24,7 @@ h1 {
     height: 100vh;
     }
   
-    .blogHeader{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3)),url(../assets/images/blog-header.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-      }
+    
     
   .heroContainer{
     display: flex;
@@ -59,6 +54,12 @@ h1 {
       text-align: center;
       line-height: 29px;
       letter-spacing: 1px;
+      &:hover{
+          color: $blueBox;;
+      }
+      &:focus{
+          color: $blueBox;;
+      }
     }
     
   

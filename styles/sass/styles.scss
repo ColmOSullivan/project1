@@ -9,6 +9,7 @@
 @use "partials/profileSection";
 @use "partials/cardSection";
 @use "partials/blogStyle";
+@use "partials/contactStyle";
 @use "partials/footer";
 
 
@@ -19,6 +20,10 @@
 }
 .flexContainer {
   display: flex;
+}
+
+main{
+  background-color: $primaryColor;
 }
 
 // button styling

@@ -32,11 +32,76 @@
       </div>
       <!-- .navBar ends -->
 
-      <div class="flexContainer">
-        <h1>Get in touch</h1>
+      <div class="contactTextContainer">
+        <div class="contactText">
+          <h1>Get in touch</h1>
+        </div>
       </div>
     </header>
-    <section class="contactSection"></section>
+    <!-- .contactHeader ends -->
+    <main>
+      <div class="contact wrapper">
+        <aside class="contactAside">
+          <div class="asideContainer">
+            <ul class="socialContainer">
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+            </ul>
+            <h4>info@email.com</h4>
+            <p>123-456-7890</p>
+            <p>123 Queen Street West, Unit 10</p>
+            <p>Toronto, Ontario</p>
+            <p>M5V2D5</p>
+          </div>
+        </aside>
+        <!-- .contactAside ends -->
+
+        <!-- contact form begins -->
+        <div class="blogForm">
+          <form action="">
+            <fieldset>
+              <div class="fieldSetWrapper">
+                <label for="fullName" class="visuallyHidden"></label>
+                <input
+                  type="text"
+                  id="fullName"
+                  placeholder="Name"
+                  name="nameInput"
+                  required="true"
+                />
+                <label for="emailAddress" class="visuallyHidden"></label>
+                <input
+                  type="email"
+                  id="emailAddress"
+                  placeholder="Email address"
+                  name="emailInput"
+                  required="true"
+                />
+                <textarea
+                  name="messageInput"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Comment"
+                ></textarea>
+                <button type="submit">Post comment</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+      <!-- .contact and .wrapper end-->
+    </main>
 
     <!-- footer begins -->
     <footer>

@@ -1,9 +1,165 @@
 @use "variables" as *;
 
+// blog header styling
 .blogSection{
-    background-color: tomato;
+    background-color: $primaryColor;
+}
+.blogHeader{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3)),url(../assets/images/blog-header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    }
+.headerTextContainer{
+    padding: 100px 0;
+}
+.blogHeaderText{
+    text-align: center;
 }
 
+// blogWrap changes
+.blogWrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+// aside styling
 .asideContainer{
-    background-color: rebeccapurple;
+    background-color: $secondaryColor;
+    padding: 0 20px;
+}
+
+.asideText h4{
+    margin: 0;
+}
+
+.blogAside{
+    width: 30%;
+    padding: 100px 0;
+}
+
+.blogAside img{
+    width: 100%;
+    position: relative;
+    top: -50;
+    left: -50;
+}
+
+
+.asideList{
+    display: flex;
+    flex-direction: column;
+    list-style-type: disc;
+    color: $white;
+    padding: 20px;
+}
+
+.asideList li{
+    padding: 2px;
+}
+
+// blog styling
+.blogSection{
+    width: 60%;
+    position: relative;
+    top: -400;
+}
+
+.blogSection .blogImage img{
+    box-shadow: -45px 50px 0px 1px $blueBox;
+    width: 100%;
+}
+
+.blogSection .blogPost{
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    box-shadow: inset 5px -5px 0px 0px $blueBox
+}
+
+.blogPost h3{
+    text-align: left;
+    font-size: 42px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.blogPost p{
+    margin: 20px 0;
+    line-height: 32px;
+}
+
+.blogPost, .commentBlock, .blogForm{
+    padding-right: 50px;
+}
+
+.blogComments{
+    padding: 50px 0;
+}
+
+.blogComments h3{
+    text-align: left;
+}
+
+.commentContainer{
+    display: flex;
+}
+
+.commentContainer img{
+    margin-top: 30px;
+}
+
+.commentContainer .commentText{
+    padding-left: 20px;
+}
+
+.commentText p{
+    margin: 20px 0;
+    line-height: 32px;
+}
+
+
+// form styling
+fieldset {
+    border: 0;
+}
+.blogForm fieldset{
+    padding: 0;
+}
+
+.blogForm fieldset .fieldSetWrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+fieldset .fieldSetWrapper label{
+    display: none;
+}
+
+fieldset .fieldSetWrapper input{
+    display: flex;
+    background-color: $primaryColor;
+    border-style: none;
+    border-bottom: 2px solid $blueBox;
+    margin-bottom: 60px;
+    padding: 30px 20px;
+    width: 45%;
+    color: $white;
+}
+
+fieldset .fieldSetWrapper textarea{
+    background-color: $primaryColor;
+    border: 2px solid $blueBox;
+    width: 100%;
+    padding: 20px;
+    color: $white;
+}
+
+fieldset .fieldSetWrapper button{
+    background-color: $secondaryColor;
+    width: 100%;
+    color: $white;
 }

@@ -31,25 +31,29 @@
             </ul>
           </nav>
           <!-- .navBar ends -->
-          <div class="blogHeaderText">
-            <h1>Blog</h1>
+          <div class="headerTextContainer">
+            <div class="blogHeaderText">
+              <h1>Blog</h1>
+            </div>
+            <!-- blogHeaderText ends -->
           </div>
-          <!-- blogHeaderText ends -->
+          <!-- .headerTextContainer -->
         </div>
         <!-- .wrapper ends -->
       </div>
       <!-- .blogHeader ends -->
     </header>
     <main>
-      <div class="blogWrap">
+      <div class="blogWrap wrapper">
         <!-- aside content -->
         <aside class="blogAside">
           <div class="asideContainer">
-            <img
-              class="asideImage"
-              src="./assets/images/side-blog-image.jpg"
-              alt="A whale shark swimming in an enclosure"
-            />
+            <div class="asideImage">
+              <img
+                src="./assets/images/side-blog-image.jpg"
+                alt="A whale shark swimming in an enclosure"
+              />
+            </div>
             <div class="asideText">
               <h4>About under the sea</h4>
               <p>
@@ -72,14 +76,15 @@
         <!-- .blogAside and aside content ends-->
 
         <section class="blogSection">
-          <img
-            class="blogImage"
-            src="./assets/images/blog-post-image.jpg"
-            alt="Some sea plant life"
-          />
+          <div class="blogImage">
+            <img
+              src="./assets/images/blog-post-image.jpg"
+              alt="Some sea plant life"
+            />
+          </div>
           <!-- .blogImage ends -->
           <div class="blogPost">
-            <h2>Discovering New species</h2>
+            <h3>Discovering New species</h3>
             <p>Wednesday May 4th 2022</p>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
@@ -96,55 +101,69 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
               ut culpa adipisci sed quaerat error omnis tenetur excepturi
               quibusdam harum ab eligendi corporis dolore nam iure, suscipit
-              nulla laborum? Nostrum.
+              nulla laborum? Nostrum. Lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Eius itaque dolorum, id in blanditiis excepturi
+              molestiae veritatis aperiam! Natus, eos veniam quidem reiciendis
+              obcaecati ipsam saepe optio repellat a! Asperiores?Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Esse saepe ullam
+              impedit expedita voluptas odit consequuntur asperiores, pariatur
+              praesentium quae sint iusto in voluptate nostrum earum quisquam
+              est ratione ipsum!
             </p>
           </div>
           <!-- .blogPost ends -->
           <div class="blogComments">
             <h3>Comments:</h3>
-            <div class="commentContainer">
-              <img
-                class="commentImage"
-                src="./assets/images/comment-1.jpg"
-                alt="Commenters profile picture"
-              />
-              <div class="commentText">
-                <p>Saturday October 9th, 2021 by Jeremy</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae nulla aliquam voluptas placeat possimus labore
-                  sapiente. Facere, architecto. Magnam eveniet obcaecati soluta
-                  optio dolore id facilis dignissimos corporis quos aliquam.
-                </p>
+            <div class="commentBlock">
+              <div class="commentContainer">
+                <div class="commentImage">
+                  <img
+                    src="./assets/images/comment-1.jpg"
+                    alt="Commenters profile picture"
+                  />
+                </div>
+                <!-- .commentImage ends -->
+                <div class="commentText">
+                  <p>Saturday October 9th, 2021 by Jeremy</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Beatae nulla aliquam voluptas placeat possimus labore
+                    sapiente. Facere, architecto. Magnam eveniet obcaecati
+                    soluta optio dolore id facilis dignissimos corporis quos
+                    aliquam.
+                  </p>
+                </div>
+                <!-- .commentText ends -->
               </div>
-              <!-- .commentText ends -->
-            </div>
-            <!-- .commentContainer ends -->
-            <div class="commentContainer">
-              <img
-                class="commentImage"
-                src="./assets/images/comment-2.jpg"
-                alt="Commenters profile picture"
-              />
-              <div class="commentText">
-                <p>Sunday October 10th, 2021 by Julia</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae nulla aliquam voluptas placeat possimus labore
-                  sapiente. Facere, architecto. Magnam eveniet obcaecati soluta
-                  optio dolore id facilis dignissimos corporis quos aliquam.
-                </p>
+              <!-- .commentContainer ends -->
+              <div class="commentContainer">
+                <div class="commentImage">
+                  <img
+                    src="./assets/images/comment-2.jpg"
+                    alt="Commenters profile picture"
+                  />
+                </div>
+                <div class="commentText">
+                  <p>Sunday October 10th, 2021 by Julia</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Beatae nulla aliquam voluptas placeat possimus labore
+                    sapiente. Facere, architecto. Magnam eveniet obcaecati
+                    soluta optio dolore id facilis dignissimos corporis quos
+                    aliquam.
+                  </p>
+                </div>
+                <!-- .commentText ends -->
               </div>
-              <!-- .commentText ends -->
+              <!-- .commentContainer ends -->
             </div>
-            <!-- .commentContainer ends -->
           </div>
           <!-- .blogComments ends -->
 
           <div class="blogForm">
             <form action="">
               <fieldset>
-                <div class="fieldsetWrapper">
+                <div class="fieldSetWrapper">
                   <label for="fullName" class="visuallyHidden"></label>
                   <input
                     type="text"
@@ -166,12 +185,14 @@
                     id="message"
                     cols="30"
                     rows="10"
-                    placeholder="Write your comment here"
+                    placeholder="Comment"
                   ></textarea>
+                  <button type="submit">Post comment</button>
                 </div>
               </fieldset>
             </form>
           </div>
+          <!-- .blogForm ends -->
         </section>
         <!-- blog section ends -->
       </div>

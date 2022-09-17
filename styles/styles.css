@@ -84,14 +84,6 @@ h1 {
   height: 100vh;
 }
 
-.blogHeader {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url(../assets/images/blog-header.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url(../assets/images/blog-header.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-}
-
 .heroContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,6 +113,12 @@ nav a {
   text-align: center;
   line-height: 29px;
   letter-spacing: 1px;
+}
+nav a:hover {
+  color: #86E0F9;
+}
+nav a:focus {
+  color: #86E0F9;
 }
 
 /* remove default styling from lists */
@@ -357,11 +355,185 @@ i {
 }
 
 .blogSection {
-  background-color: tomato;
+  background-color: #0C1423;
+}
+
+.blogHeader {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url(../assets/images/blog-header.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url(../assets/images/blog-header.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+}
+
+.headerTextContainer {
+  padding: 100px 0;
+}
+
+.blogHeaderText {
+  text-align: center;
+}
+
+.blogWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .asideContainer {
-  background-color: rebeccapurple;
+  background-color: #0F614E;
+  padding: 0 20px;
+}
+
+.asideText h4 {
+  margin: 0;
+}
+
+.blogAside {
+  width: 30%;
+  padding: 100px 0;
+}
+
+.blogAside img {
+  width: 100%;
+  position: relative;
+  top: -50;
+  left: -50;
+}
+
+.asideList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: disc;
+  color: #FFFFFF;
+  padding: 20px;
+}
+
+.asideList li {
+  padding: 2px;
+}
+
+.blogSection {
+  width: 60%;
+  position: relative;
+  top: -400;
+}
+
+.blogSection .blogImage img {
+  -webkit-box-shadow: -45px 50px 0px 1px #86E0F9;
+          box-shadow: -45px 50px 0px 1px #86E0F9;
+  width: 100%;
+}
+
+.blogSection .blogPost {
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  -webkit-box-shadow: inset 5px -5px 0px 0px #86E0F9;
+          box-shadow: inset 5px -5px 0px 0px #86E0F9;
+}
+
+.blogPost h3 {
+  text-align: left;
+  font-size: 42px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.blogPost p {
+  margin: 20px 0;
+  line-height: 32px;
+}
+
+.blogPost, .commentBlock, .blogForm {
+  padding-right: 50px;
+}
+
+.blogComments {
+  padding: 50px 0;
+}
+
+.blogComments h3 {
+  text-align: left;
+}
+
+.commentContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.commentContainer img {
+  margin-top: 30px;
+}
+
+.commentContainer .commentText {
+  padding-left: 20px;
+}
+
+.commentText p {
+  margin: 20px 0;
+  line-height: 32px;
+}
+
+fieldset {
+  border: 0;
+}
+
+.blogForm fieldset {
+  padding: 0;
+}
+
+.blogForm fieldset .fieldSetWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+fieldset .fieldSetWrapper label {
+  display: none;
+}
+
+fieldset .fieldSetWrapper input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #0C1423;
+  border-style: none;
+  border-bottom: 2px solid #86E0F9;
+  margin-bottom: 60px;
+  padding: 30px 20px;
+  width: 45%;
+  color: #FFFFFF;
+}
+
+fieldset .fieldSetWrapper textarea {
+  background-color: #0C1423;
+  border: 2px solid #86E0F9;
+  width: 100%;
+  padding: 20px;
+  color: #FFFFFF;
+}
+
+fieldset .fieldSetWrapper button {
+  background-color: #0F614E;
+  width: 100%;
+  color: #FFFFFF;
 }
 
 footer {
@@ -384,6 +556,10 @@ footer p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+main {
+  background-color: #0C1423;
 }
 
 a.findButton {
