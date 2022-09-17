@@ -19,64 +19,66 @@
     <title>Blog</title>
   </head>
   <body>
-    <header class="blogHeader">
-      <div class="wrapper">
-        <nav class="navBar">
-          <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-          </ul>
-        </nav>
+    <header>
+      <div class="blogHeader">
+        <div class="wrapper">
+          <nav class="navBar">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./index.html#about">About</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <!-- .navBar ends -->
+          <div class="blogHeaderText">
+            <h1>Blog</h1>
+          </div>
+          <!-- blogHeaderText ends -->
+        </div>
+        <!-- .wrapper ends -->
       </div>
-      <!-- .navBar ends -->
-      <div class="flexContainer">
-        <h1>Blog</h1>
-      </div>
+      <!-- .blogHeader ends -->
     </header>
     <main>
-      <section class="blogSection">
-        <aside class="asideContainer">
-          <img
-            src="./assets/images/side-blog-image.jpg"
-            alt="A whale shark swimming in an enclosure"
-          />
-          <div>
-            <div>
+      <div class="blogWrap">
+        <!-- aside content -->
+        <aside class="blogAside">
+          <div class="asideContainer">
+            <img
+              class="asideImage"
+              src="./assets/images/side-blog-image.jpg"
+              alt="A whale shark swimming in an enclosure"
+            />
+            <div class="asideText">
               <h4>About under the sea</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.Quisquam
+                doloribus iste blanditiis neque et omnis.
+              </p>
               <h4>Recent posts</h4>
-              <ul>
-                <li>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </li>
-                <li>
-                  <p>Dignissimos labore provident soluta.</p>
-                </li>
-                <li>
-                  <p>Iure mollitia eaque excepturi.</p>
-                </li>
-                <li>
-                  <p>Quaerat deleniti ullam vitae.</p>
-                </li>
+              <ul class="asideList">
+                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Dignissimos labore provident soluta.</li>
+                <li>Iure mollitia eaque excepturi.</li>
+                <li>Quaerat deleniti ullam vitae.</li>
               </ul>
+              <!-- .asideList ends -->
             </div>
+            <!-- .asideText ends -->
           </div>
+          <!-- .asideContainer ends -->
         </aside>
+        <!-- .blogAside and aside content ends-->
 
-        <div class="blogContainer">
+        <section class="blogSection">
+          <img
+            class="blogImage"
+            src="./assets/images/blog-post-image.jpg"
+            alt="Some sea plant life"
+          />
+          <!-- .blogImage ends -->
           <div class="blogPost">
-            <div>
-              <img
-                class="blogImage"
-                src="./assets/images/blog-post-image.jpg"
-                alt="Some sea plant life"
-              />
-              <!-- .blogImage ends -->
-            </div>
             <h2>Discovering New species</h2>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
@@ -101,10 +103,11 @@
             <h4>Comments:</h4>
           </div>
           <!-- .blogComments ends -->
-        </div>
-        <!-- .blogContainer ends -->
-      </section>
+        </section>
+      </div>
+      <!-- .blogWrap and wapper ends -->
     </main>
+    <!-- main ends and footer begins -->
     <footer>
       <p>Copyright © 2022 Juno College</p>
     </footer>
