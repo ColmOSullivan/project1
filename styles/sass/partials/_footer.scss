@@ -1,1 +1,11 @@
 @use "variables" as *;
+
+footer{
+    background-color: $blueBox;
+    color: black;
+    text-align: center;
+}
+
+footer p {
+    margin: 0 auto;
+}
