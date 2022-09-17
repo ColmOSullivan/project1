@@ -356,6 +356,14 @@ i {
           flex-direction: column;
 }
 
+.blogSection {
+  background-color: tomato;
+}
+
+.asideContainer {
+  background-color: rebeccapurple;
+}
+
 footer {
   background-color: #86E0F9;
   color: black;
