@@ -175,6 +175,7 @@ a {
   max-width: 75%;
   margin: 20px;
   line-height: 32px;
+  text-align: left;
 }
 
 .newsSection {
@@ -239,20 +240,15 @@ a {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-
 .iconContainer .flexIcon {
   width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
 .iconContainer .flexIcon i {
   margin-right: 30px;
   margin-top: 20px;
-}
-
-.flexIcon i {
   display: inline-block;
   border-radius: 50%;
   padding: 20px 20px;
@@ -264,10 +260,9 @@ a {
 
 .sharkBreak {
   background: url(../assets/images/banner.jpg);
-  background-color: tomato;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 70vh;
 }
 
 .profileSection {
@@ -283,18 +278,19 @@ a {
   display: -ms-flexbox;
   display: flex;
 }
-
-.profileImage {
+.profileContainer .profileImage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
 .profileContainer img {
   -webkit-box-shadow: 30px 30px #86E0F9;
           box-shadow: 30px 30px #86E0F9;
 }
 
+.profileText {
+  margin-left: 100px;
+}
 .profileText h3 {
   font-size: 42px;
   text-align: center;
@@ -303,14 +299,9 @@ a {
   text-align: left;
   margin: 20px 0;
 }
-
 .profileText p {
   line-height: 32px;
   padding-bottom: 50px;
-}
-
-.profileContainer .profileText {
-  margin-left: 100px;
 }
 
 .cardSection {

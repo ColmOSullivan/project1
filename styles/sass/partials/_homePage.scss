@@ -1,0 +1,173 @@
+@use "variables" as *;
+
+// about section
+
+ .aboutSection{
+    background-color: $primaryColor;
+    padding: 100px 0px;
+    text-align: center;
+    
+  }
+
+.aboutText{
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      font-size: 42px;
+      text-align: center;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 20px 0;
+    }
+    p{
+      max-width: 75%;
+      margin: 20px;
+      line-height: 32px;
+      text-align: left;
+    }
+  }
+
+//   about section ends
+// News section begins
+.newsSection {
+    background-color: $secondaryColor;
+    padding: 0;
+}
+
+.newsBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .imageContainer img{
+        width: 100%;
+    }
+    .leftImage{
+        position: relative;
+        top: -30px;
+        left: -100px;
+        img{
+            box-shadow: 30px 30px $blueBox;
+        }
+    }
+    .rightImage{
+        position: relative;
+    bottom: -30px;
+    right: -100px;
+    img{
+        box-shadow: -30px 30px 0px 0px $blueBox;
+    }
+    }
+    }
+    
+
+// text box styling and sizing
+.newsText{
+    width: 45%;
+    &.rightBox{
+        text-align: right;
+    }
+    p{
+        margin: 20px 0 30px;
+        line-height: 32px;
+    }
+}
+
+// Icon section
+
+.iconSection{
+    background-color: $primaryColor;
+    padding-bottom: 50px;
+}
+
+.iconContainer{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .flexIcon{
+      width: 45%;
+      display: flex;
+      i{
+        margin-right: 30px;
+        margin-top: 20px;
+        display: inline-block;
+        border-radius: 50%;
+        padding: 20px 20px;
+        height: 60px;
+        background-color: $blueBox;
+        color: $primaryColor;
+        font-size: 25px;
+        }
+    }
+    
+}
+// Icon ends
+// banner
+.sharkBreak{
+    background: url(../assets/images/banner.jpg);
+    // background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+}
+// banner ends
+
+
+// profile section
+.profileSection{
+    background-color: $primaryColor;
+    display: flex;
+    padding-bottom: 100px;
+}
+// profile image styling
+.profileContainer{
+    display: flex;
+    .profileImage{
+        display: flex;
+    }
+    img{
+        box-shadow: 30px 30px $blueBox;
+    }
+    
+}
+// text changes and styling
+.profileText {
+    margin-left: 100px;
+    h3 {
+        font-size: 42px;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: left;
+        margin: 20px 0;
+    }
+    p{
+        line-height: 32px;
+        padding-bottom: 50px;
+    }
+}
+// profile section ends
+// card section begins
+
+.cardSection{
+    background-color: $secondaryColor;
+    display: flex;
+}
+.cardContainer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.card{
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+// Media Queries
+@media (max-width: $tablet){
+    
+}
