@@ -19,13 +19,23 @@
     h4{
         padding-left: 20px;
         margin: 20px 0;
+        font-size: 25px;
+        justify-content: flex-start;
     }
     p{
         padding-left: 20px;
         margin: 0;
+        line-height: 32px;
     }
 }
-
+.socialList{
+    display: flex;
+    justify-content: flex-start;
+        li{
+            padding:0 15px;
+            align-items: left;
+        }
+}
 
 // form styling
 .formSection{
@@ -35,6 +45,7 @@
 }
 .contactForm fieldset {
     padding: 0;
+    border: 0;
     box-shadow: -30px 30px 0px 0px $blueBox;
 
     .fieldSetWrapper {
@@ -82,3 +93,10 @@
     padding: 10px 20px;
     margin: 20px 0;
  }
+
+//  Media Queries
+@media (max-width: $tablet){
+    .contact{
+        justify-content: center;
+    }
+}

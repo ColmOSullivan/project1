@@ -109,6 +109,9 @@ h1 {
   font-size: 32px;
   letter-spacing: 1px;
 }
+.navBar ul li {
+  padding: 30px;
+}
 
 nav a {
   text-decoration: none;
@@ -134,10 +137,6 @@ ul {
       -ms-flex-pack: end;
           justify-content: flex-end;
   list-style: none;
-}
-
-ul li {
-  padding: 30px;
 }
 
 /* remove underline from anchor tags */
@@ -260,6 +259,7 @@ a {
 
 .sharkBreak {
   background: url(../assets/images/banner.jpg);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 70vh;
@@ -324,7 +324,7 @@ a {
 }
 
 .card {
-  max-width: 25%;
+  max-width: 33%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,6 +334,80 @@ a {
           flex-direction: column;
 }
 
+@media (max-width: 800px) {
+  .newsTopRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .newsBottomRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+  }
+  .newsText {
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  .iconContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .iconContainer .flexIcon {
+    width: 90%;
+  }
+}
+@media (max-width: 800px) {
+  .profileContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+  }
+  .profileContainer .profileImage {
+    margin-bottom: 15px;
+  }
+  .profileContainer .profileText {
+    text-align: center;
+  }
+  .profileContainer .profileText h3 {
+    text-align: center;
+  }
+}
+@media (max-width: 800px) {
+  .cardContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cardContainer .card {
+    margin: 10px 0;
+    max-width: 50%;
+  }
+}
 .blogHeader {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url(../assets/images/blog-header.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url(../assets/images/blog-header.jpg);
@@ -547,10 +621,30 @@ a {
 .asideContactContainer h4 {
   padding-left: 20px;
   margin: 20px 0;
+  font-size: 25px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .asideContactContainer p {
   padding-left: 20px;
   margin: 0;
+  line-height: 32px;
+}
+
+.socialList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.socialList li {
+  padding: 0 15px;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
 .formSection {
@@ -561,6 +655,7 @@ a {
 
 .contactForm fieldset {
   padding: 0;
+  border: 0;
   -webkit-box-shadow: -30px 30px 0px 0px #86E0F9;
           box-shadow: -30px 30px 0px 0px #86E0F9;
 }
@@ -613,6 +708,13 @@ a {
   margin: 20px 0;
 }
 
+@media (max-width: 800px) {
+  .contact {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 footer {
   background-color: #86E0F9;
   color: black;

@@ -107,7 +107,7 @@
 // banner
 .sharkBreak{
     background: url(../assets/images/banner.jpg);
-    // background-position: center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 70vh;
@@ -162,12 +162,64 @@
 }
 
 .card{
-    max-width: 25%;
+    max-width: 33%;
     display: flex;
     flex-direction: column;
 }
 
-// Media Queries
+// Media Queries-News Section
 @media (max-width: $tablet){
-    
+    .newsTopRow{
+        flex-direction: column;
+        align-items: center;
+    }
+    .newsBottomRow{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .newsText{
+        width: 90%;
+    }
+}
+
+// Media Queries-Icon Section
+@media (max-width: $tablet){
+    .iconContainer{
+        flex-direction: column;
+        align-items: center;
+        .flexIcon{
+            width: 90%;
+        }
+    }
+}
+
+// Media Queries-Profile Section
+@media (max-width: $tablet){
+    .profileContainer{
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        .profileImage {
+            margin-bottom: 15px;
+          }
+          .profileText{
+            text-align: center;
+            h3{
+                text-align: center;
+            }
+          }
+    }
+}
+
+// Media Queries-Card section
+@media (max-width: $tablet){
+    .cardContainer{
+        flex-direction: column;
+        align-items: center;
+        .card{
+            margin: 10px 0;
+            max-width: 50%;
+        }
+    }
 }
