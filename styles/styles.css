@@ -263,7 +263,7 @@ a {
   margin-top: 20px;
 }
 
-i {
+.flexIcon i {
   display: inline-block;
   border-radius: 50%;
   padding: 20px 20px;
@@ -530,10 +530,101 @@ fieldset .fieldSetWrapper textarea {
   color: #FFFFFF;
 }
 
-fieldset .fieldSetWrapper button {
+.commentSubmit {
   background-color: #0F614E;
   width: 100%;
   color: #FFFFFF;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactTextContainer {
+  padding: 100px 0;
+}
+
+.contactText {
+  text-align: center;
+}
+
+.asideContactContainer {
+  padding-top: 100px;
+}
+
+.asideContactContainer h4,
+.asideContactContainer p {
+  padding-left: 20px;
+}
+
+.asideContactContainer h4 {
+  margin: 20px 0;
+}
+
+.asideContactContainer p {
+  margin: 0;
+}
+
+.formSection {
+  width: 70%;
+  position: relative;
+  top: -400px;
+}
+
+.contactForm fieldset {
+  padding: 0;
+  -webkit-box-shadow: -30px 30px 0px 0px #86E0F9;
+          box-shadow: -30px 30px 0px 0px #86E0F9;
+}
+
+.contactForm fieldset .fieldSetWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #0F614E;
+  padding: 100px;
+}
+
+.contact-form label {
+  display: none;
+}
+
+.contact-form fieldset .fieldSetWrapper textarea {
+  background-color: #0F614E;
+  border: 2px solid #86E0F9;
+  width: 100%;
+  padding: 20px;
+}
+
+.emailSubmit {
+  background-color: #0C1423;
+  width: 100%;
+  color: #FFFFFF;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px 20px;
+  margin: 20px 0;
 }
 
 footer {

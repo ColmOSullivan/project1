@@ -1,1 +1,77 @@
 @use "variables" as *;
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactTextContainer{
+    padding: 100px 0;
+}
+
+.contactText{
+    text-align: center;
+}
+
+
+.asideContactContainer{
+    padding-top: 100px;
+    
+}
+
+.asideContactContainer h4,
+.asideContactContainer p{
+    padding-left: 20px;
+}
+
+.asideContactContainer h4{
+    margin: 20px 0;
+}
+
+.asideContactContainer p{
+    margin: 0;
+}
+
+.formSection{
+    width: 70%;
+    position: relative;
+    top: -400px;
+}
+
+.contactForm fieldset{
+    padding: 0;
+    box-shadow: -30px 30px 0px 0px $blueBox;
+}
+
+.contactForm fieldset .fieldSetWrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: $secondaryColor;
+    padding: 100px;
+}
+
+.contact-form label{
+    display: none;
+ }
+
+ .contact-form fieldset .fieldSetWrapper textarea{
+    background-color: $secondaryColor;
+    border: 2px solid $blueBox;
+    width: 100%;
+    padding: 20px;
+ }
+
+ .emailSubmit{
+    background-color: $primaryColor;
+    width: 100%;
+    color: $white;
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+ }

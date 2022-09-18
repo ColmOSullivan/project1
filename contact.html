@@ -16,7 +16,7 @@
       src="https://kit.fontawesome.com/77fbeab9e1.js"
       crossorigin="anonymous"
     ></script>
-    <title>Contact</title>
+    <title>Under The Sea-Contact</title>
   </head>
   <body>
     <header class="contactHeader">
@@ -39,65 +39,73 @@
       </div>
     </header>
     <!-- .contactHeader ends -->
-    <main>
+    <main class="contact">
       <div class="contact wrapper">
+        <!-- social media -->
         <aside class="contactAside">
-          <div class="asideContainer">
-            <ul class="socialContainer">
-              <li>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-snapchat"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-              </li>
-            </ul>
-            <h4>info@email.com</h4>
-            <p>123-456-7890</p>
-            <p>123 Queen Street West, Unit 10</p>
-            <p>Toronto, Ontario</p>
-            <p>M5V2D5</p>
+          <div class="asideContactContainer">
+            <div class="socialContainer">
+              <ul class="socialList">
+                <li>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+              </ul>
+              <!-- .socialList ends -->
+              <h4>info@email.com</h4>
+              <p>123-456-7890</p>
+              <p>123 Queen Street West, Unit 10</p>
+              <p>Toronto, Ontario</p>
+              <p>M5V2D5</p>
+            </div>
+            <!-- socialContainer ends -->
           </div>
+          <!-- .asideContainer ends -->
         </aside>
         <!-- .contactAside ends -->
 
         <!-- contact form begins -->
-        <div class="blogForm">
-          <form action="">
-            <fieldset>
-              <div class="fieldSetWrapper">
-                <label for="fullName" class="visuallyHidden"></label>
-                <input
-                  type="text"
-                  id="fullName"
-                  placeholder="Name"
-                  name="nameInput"
-                  required="true"
-                />
-                <label for="emailAddress" class="visuallyHidden"></label>
-                <input
-                  type="email"
-                  id="emailAddress"
-                  placeholder="Email address"
-                  name="emailInput"
-                  required="true"
-                />
-                <textarea
-                  name="messageInput"
-                  id="message"
-                  cols="30"
-                  rows="10"
-                  placeholder="Comment"
-                ></textarea>
-                <button type="submit">Post comment</button>
-              </div>
-            </fieldset>
-          </form>
+        <section class="formSection">
+          <div class="contactForm">
+            <form action="">
+              <fieldset>
+                <div class="fieldSetWrapper">
+                  <label for="fullName" class="visuallyHidden"></label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Name"
+                    name="nameInput"
+                    required="true"
+                  />
+                  <label for="emailAddress" class="visuallyHidden"></label>
+                  <input
+                    type="email"
+                    id="emailAddress"
+                    placeholder="Email address"
+                    name="emailInput"
+                    required="true"
+                  />
+                  <textarea
+                    name="messageInput"
+                    id="message"
+                    cols="30"
+                    rows="7"
+                    placeholder="Message"
+                  ></textarea>
+                  <button class="emailSubmit" type="submit">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+        </section>
         </div>
       </div>
       <!-- .contact and .wrapper end-->

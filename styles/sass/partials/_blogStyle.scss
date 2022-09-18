@@ -158,8 +158,15 @@ fieldset .fieldSetWrapper textarea{
     color: $white;
 }
 
-fieldset .fieldSetWrapper button{
+.commentSubmit{
     background-color: $secondaryColor;
     width: 100%;
     color: $white;
-}
+    font-weight: bold;
+    line-height: 32px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px 0;
+  }
