@@ -2,7 +2,7 @@
 
 // Header styles
 h1 {
-    font-family: $headingFont, sans-serif;
+    font-family: $headingFont;
     font-size: 138px;
     line-height: 126px;
     text-transform: uppercase;
@@ -30,16 +30,25 @@ h1 {
     display: flex;
     padding: 100px 0;
   }
-  
+
   .heroHead{
     width: 40%;
+    z-index: 1;
   }
-  .heroImg {
+
+  .heroImg{
     position: absolute;
     right: 0;
-    top: 200;
+    bottom: -100px;
+    @media (max-width: $tablet){
+      display:none;
+    }
+    img{
+      max-width: 100%;
+    }
   }
-   
+  
+  
   
   // Nav and anchor styling
     .navBar{
@@ -79,15 +88,8 @@ h1 {
     text-decoration: none;
   }
   
-  .heroImg{
-    position: absolute;
-    right: 0;
-    top: 200;
-  }
   
-  .heroImg img{
-    max-width: 100%;
-  }
+  
   
   // Header styling ends
   

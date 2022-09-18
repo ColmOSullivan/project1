@@ -1,9 +1,7 @@
 @use "variables" as *;
 
 // blog header styling
-.blogSection{
-    background-color: $primaryColor;
-}
+
 .blogHeader{
     background-image: linear-gradient(rgba(0, 0, 0, 0.3)),url(../assets/images/blog-header.jpg);
     background-position: center;
@@ -29,20 +27,28 @@
     padding: 0 20px;
 }
 
-.asideText h4{
-    margin: 0;
-}
+.asideText{
+    padding:16px;
+    h4{
+        margin-top: 0;
+        font-size: 24px;
+    }
+    p{
+        line-height: 32px;
+        margin-bottom: 20px;
+    }
+} 
 
 .blogAside{
     width: 30%;
     padding: 100px 0;
-}
-
-.blogAside img{
-    width: 100%;
-    position: relative;
-    top: -50;
-    left: -50;
+    img{
+        width: 120%;
+        position: relative;
+        top: -22px;
+        left: -64px;
+        border: none;
+    }
 }
 
 
@@ -52,17 +58,18 @@
     list-style-type: disc;
     color: $white;
     padding: 20px;
+    li{
+        padding: 2px;
+    }
 }
 
-.asideList li{
-    padding: 2px;
-}
+
 
 // blog styling
 .blogSection{
     width: 60%;
     position: relative;
-    top: -400;
+    top: -400px;
 }
 
 .blogSection .blogImage img{
@@ -71,9 +78,9 @@
 }
 
 .blogSection .blogPost{
-    padding-top: 100px;
+    padding-top: 50px;
     padding-left: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 5px;
     box-shadow: inset 5px -5px 0px 0px $blueBox
 }
 
@@ -104,58 +111,52 @@
 
 .commentContainer{
     display: flex;
+    img{
+        margin-top: 30px;
+    }
+    .commentText{
+        padding-left: 20px;
+        p{
+            margin: 20px 0;
+            line-height: 32px;
+        }
+    }
 }
-
-.commentContainer img{
-    margin-top: 30px;
-}
-
-.commentContainer .commentText{
-    padding-left: 20px;
-}
-
-.commentText p{
-    margin: 20px 0;
-    line-height: 32px;
-}
-
 
 // form styling
-fieldset {
-    border: 0;
-}
-.blogForm fieldset{
+
+.blogForm fieldset {
     padding: 0;
-}
+    border: 0;
+    .fieldSetWrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        label {
+            display: none;
+        }
 
-.blogForm fieldset .fieldSetWrapper{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+        input {
+            display: flex;
+            background-color: $primaryColor;
+            border-style: none;
+            border-bottom: 2px solid $blueBox;
+            margin-bottom: 60px;
+            padding: 30px 20px;
+            width: 45%;
+            color: white;
+        }
 
-fieldset .fieldSetWrapper label{
-    display: none;
-}
-
-fieldset .fieldSetWrapper input{
-    display: flex;
-    background-color: $primaryColor;
-    border-style: none;
-    border-bottom: 2px solid $blueBox;
-    margin-bottom: 60px;
-    padding: 30px 20px;
-    width: 45%;
-    color: $white;
-}
-
-fieldset .fieldSetWrapper textarea{
-    background-color: $primaryColor;
-    border: 2px solid $blueBox;
-    width: 100%;
-    padding: 20px;
-    color: $white;
+        textarea {
+            background-color: $primaryColor;
+            border: 2px solid $blueBox;
+            width: 100%;
+            padding: 20px;
+            color: $white;
+        }
+    }
 }
 
 .commentSubmit{
@@ -169,4 +170,17 @@ fieldset .fieldSetWrapper textarea{
     border: none;
     padding: 10px 20px;
     margin: 20px 0;
+  }
+
+
+// Media queries
+
+@media (max-width: $tablet){
+    .asideContainer{
+        display:none;
+    }
+    .blogSection{
+        width: 100%;
+        
+    }
   }

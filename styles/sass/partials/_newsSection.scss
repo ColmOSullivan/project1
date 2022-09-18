@@ -2,58 +2,44 @@
 
 .newsSection {
     background-color: $secondaryColor;
+    padding: 0;
 }
 
-.newsSection .newsBox{
+.newsBox{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-
-
-// news content image sizing
-.newsBox .imageContainer{
-    width: 45%;
-}
-
-.newsBox .imageContainer img{
-    width: 100%;
-}
-
-// left image box, shadow and positioning
-
-.newsSection .newsBox .leftImage{
-    position: relative;
-  top: -150;
-  left: -100;
-}
-
-.leftImage img{
-    box-shadow: 30px 30px $blueBox;
-}
-
-.rightImage img{
-    box-shadow: -30px 30px 0px 0px $blueBox;
-}
-
+    .imageContainer img{
+        width: 100%;
+    }
+    .leftImage{
+        position: relative;
+        top: -30px;
+        left: -100px;
+        img{
+            box-shadow: 30px 30px $blueBox;
+        }
+    }
+    .rightImage{
+        position: relative;
+    bottom: -30px;
+    right: -100px;
+    img{
+        box-shadow: -30px 30px 0px 0px $blueBox;
+    }
+    }
+    }
+    
 
 // text box styling and sizing
 .newsText{
     width: 45%;
+    &.rightBox{
+        text-align: right;
+    }
+    p{
+        margin: 20px 0 30px;
+        line-height: 32px;
+    }
 }
 
-// .newsText h4{
-//     font-size: 32px;
-//     letter-spacing: 1px;
-//     text-transform: uppercase;
-//     margin: 20px 0;
-// }
-
-.newsText p{
-    margin: 20px 0 30px;
-    line-height: 32px;
-}
-
-.rightBox{
-    text-align: right;
-}

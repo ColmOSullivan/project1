@@ -5,7 +5,14 @@ $blueBox:#86E0F9;
 $white:#FFFFFF;
 
 // fonts
-$headingFont:"Barlow-Bold";
-$bodyFont:"Lato-Regular";
-$footerFont:"Lato-Regular";
+$headingFont:"Barlow-Bold", sans-serif;
+$bodyFont:"Lato-Regular", sans-serif;
+$footerFont:"Lato-Regular", sans-serif;
+
+
+// breakpoints
+
+$desktop:"1000px";
+$tablet:"800px";
+$mobile:"500px";
 
