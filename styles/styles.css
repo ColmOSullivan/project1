@@ -112,6 +112,11 @@ h1 {
 .navBar ul li {
   padding: 30px;
 }
+@media (max-width: 500px) {
+  .navBar ul li {
+    padding: 15px;
+  }
+}
 
 nav a {
   text-decoration: none;
@@ -213,8 +218,26 @@ a {
           box-shadow: -30px 30px 0px 0px #86E0F9;
 }
 
+.newsTopRow {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.newsTopRow .newsText {
+  margin-top: 60px;
+}
+
+.newsBottomRow {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.newsBottomRow .newsText {
+  margin-top: 60px;
+}
+
 .newsText {
-  width: 45%;
+  width: 33%;
 }
 .newsText.rightBox {
   text-align: right;
@@ -387,7 +410,7 @@ a {
     margin-bottom: 15px;
   }
   .profileContainer .profileText {
-    text-align: center;
+    text-align: left;
   }
   .profileContainer .profileText h3 {
     text-align: center;
@@ -480,8 +503,7 @@ a {
 
 .blogSection {
   width: 60%;
-  position: relative;
-  top: -400px;
+  margin-top: -430px;
 }
 
 .blogSection .blogImage img {
@@ -649,8 +671,7 @@ a {
 
 .formSection {
   width: 70%;
-  position: relative;
-  bottom: 700px;
+  margin-top: -700px;
 }
 
 .contactForm fieldset {
@@ -710,9 +731,16 @@ a {
 
 @media (max-width: 800px) {
   .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .contact .formSection {
+    width: 90%;
   }
 }
 footer {

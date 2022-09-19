@@ -63,8 +63,22 @@
     
 
 // text box styling and sizing
+.newsTopRow{
+    justify-content: space-evenly;
+    .newsText{
+        margin-top: 60px;
+    }
+}
+
+.newsBottomRow{
+    justify-content: space-evenly;
+    .newsText{
+        margin-top: 60px;
+    }
+}
+
 .newsText{
-    width: 45%;
+    width: 33%;
     &.rightBox{
         text-align: right;
     }
@@ -204,7 +218,7 @@
             margin-bottom: 15px;
           }
           .profileText{
-            text-align: center;
+            text-align: left;
             h3{
                 text-align: center;
             }

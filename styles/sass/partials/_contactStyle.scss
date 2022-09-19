@@ -40,8 +40,7 @@
 // form styling
 .formSection{
     width: 70%;
-    position: relative;
-    bottom: 700px;
+    margin-top: -700px;
 }
 .contactForm fieldset {
     padding: 0;
@@ -97,6 +96,10 @@
 //  Media Queries
 @media (max-width: $tablet){
     .contact{
+        flex-direction: column-reverse;
         justify-content: center;
+        .formSection{
+            width: 90%;
+        }
     }
 }
