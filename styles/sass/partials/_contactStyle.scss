@@ -41,6 +41,9 @@
 .formSection{
     width: 70%;
     margin-top: -700px;
+    @media (max-width: $tablet){
+        padding: 0 0 50px 0;
+    }
 }
 .contactForm fieldset {
     padding: 0;
@@ -54,7 +57,9 @@
         justify-content: space-between;
         background-color: $secondaryColor;
         padding: 100px;
-        
+        @media (max-width: $tablet){
+            padding: 24px;
+        }
         label {
             display: none;
         }
@@ -99,7 +104,12 @@
         flex-direction: column-reverse;
         justify-content: center;
         .formSection{
-            width: 90%;
+            width: 100%;
+            margin-top:0;
+        }
+        .contactAside{
+            justify-content: center;
+
         }
     }
 }

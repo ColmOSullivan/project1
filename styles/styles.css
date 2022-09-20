@@ -78,6 +78,11 @@ h1 {
   background-size: cover;
   height: 100vh;
 }
+@media (max-width: 800px) {
+  .contactHeader {
+    height: auto;
+  }
+}
 
 .heroContainer {
   display: -webkit-box;
@@ -198,6 +203,7 @@ a {
 }
 .newsBox .imageContainer img {
   width: 100%;
+  overflow: hidden;
 }
 .newsBox .leftImage {
   position: relative;
@@ -216,6 +222,14 @@ a {
 .newsBox .rightImage img {
   -webkit-box-shadow: -30px 30px 0px 0px #86E0F9;
           box-shadow: -30px 30px 0px 0px #86E0F9;
+}
+@media (max-width: 800px) {
+  .newsBox .leftImage {
+    position: none;
+  }
+  .newsBox .rightImage {
+    position: none;
+  }
 }
 
 .newsTopRow {
@@ -247,6 +261,30 @@ a {
   line-height: 32px;
 }
 
+@media (max-width: 800px) {
+  .newsTopRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .newsBottomRow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+  }
+  .newsText {
+    width: 90%;
+  }
+}
 .iconSection {
   background-color: #0C1423;
   padding-bottom: 50px;
@@ -358,7 +396,7 @@ a {
 }
 
 @media (max-width: 800px) {
-  .newsTopRow {
+  .cardContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -367,18 +405,9 @@ a {
         -ms-flex-align: center;
             align-items: center;
   }
-  .newsBottomRow {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 10px;
-  }
-  .newsText {
-    width: 90%;
+  .cardContainer .card {
+    margin: 10px 0;
+    max-width: 50%;
   }
 }
 @media (max-width: 800px) {
@@ -416,21 +445,6 @@ a {
     text-align: center;
   }
 }
-@media (max-width: 800px) {
-  .cardContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .cardContainer .card {
-    margin: 10px 0;
-    max-width: 50%;
-  }
-}
 .blogHeader {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3))), url(../assets/images/blog-header.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.3)), url(../assets/images/blog-header.jpg);
@@ -455,6 +469,14 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 800px) {
+  .blogWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .asideContainer {
   background-color: #0F614E;
@@ -477,12 +499,24 @@ a {
   width: 30%;
   padding: 100px 0;
 }
+@media (max-width: 800px) {
+  .blogAside {
+    width: 100%;
+    padding: 50px 20px;
+  }
+}
 .blogAside img {
   width: 120%;
   position: relative;
   top: -22px;
   left: -64px;
   border: none;
+}
+@media (max-width: 800px) {
+  .blogAside img {
+    width: 100%;
+    position: none;
+  }
 }
 
 .asideList {
@@ -504,6 +538,13 @@ a {
 .blogSection {
   width: 60%;
   margin-top: -430px;
+}
+@media (max-width: 800px) {
+  .blogSection {
+    width: 100%;
+    padding: 50px 20px;
+    margin-top: 0;
+  }
 }
 
 .blogSection .blogImage img {
@@ -612,14 +653,6 @@ a {
   margin: 20px 0;
 }
 
-@media (max-width: 800px) {
-  .asideContainer {
-    display: none;
-  }
-  .blogSection {
-    width: 100%;
-  }
-}
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -673,6 +706,11 @@ a {
   width: 70%;
   margin-top: -700px;
 }
+@media (max-width: 800px) {
+  .formSection {
+    padding: 0 0 50px 0;
+  }
+}
 
 .contactForm fieldset {
   padding: 0;
@@ -692,6 +730,11 @@ a {
           justify-content: space-between;
   background-color: #0F614E;
   padding: 100px;
+}
+@media (max-width: 800px) {
+  .contactForm fieldset .fieldSetWrapper {
+    padding: 24px;
+  }
 }
 .contactForm fieldset .fieldSetWrapper label {
   display: none;
@@ -740,7 +783,13 @@ a {
             justify-content: center;
   }
   .contact .formSection {
-    width: 90%;
+    width: 100%;
+    margin-top: 0;
+  }
+  .contact .contactAside {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 footer {

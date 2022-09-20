@@ -19,7 +19,11 @@
 .blogWrap{
     display: flex;
     justify-content: space-between;
+    @media (max-width: $tablet){
+        flex-direction: column;
+      }
 }
+
 
 // aside styling
 .asideContainer{
@@ -42,13 +46,22 @@
 .blogAside{
     width: 30%;
     padding: 100px 0;
+    @media (max-width: $tablet){
+        width: 100%;
+        padding: 50px 20px;
+    }
     img{
         width: 120%;
         position: relative;
         top: -22px;
         left: -64px;
         border: none;
+        @media (max-width: $tablet){
+            width: 100%;
+            position: none;
+        }
     }
+    
 }
 
 
@@ -69,6 +82,11 @@
 .blogSection{
     width: 60%;
     margin-top: -430px;
+    @media (max-width: $tablet){
+        width: 100%;
+        padding: 50px 20px;
+        margin-top: 0;
+    }
 }
 
 .blogSection .blogImage img{
@@ -174,12 +192,3 @@
 
 // Media queries
 
-@media (max-width: $tablet){
-    .asideContainer{
-        display:none;
-    }
-    .blogSection{
-        width: 100%;
-        
-    }
-  }
