@@ -34,6 +34,8 @@
 .newsSection {
     background-color: $secondaryColor;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .newsBox{
@@ -49,6 +51,7 @@
         top: -30px;
         left: -100px;
         img{
+            
             box-shadow: 30px 30px $blueBox;
         }
     }
@@ -57,15 +60,20 @@
         bottom: -30px;
         right: -100px;
     img{
+        
         box-shadow: -30px 30px 0px 0px $blueBox;
     }
     }
     @media (max-width: $tablet){
         .leftImage{
             position: none;
+            top: 0;
+            left: 0;
         }
         .rightImage{
             position: none;
+            bottom: 0;
+            right: 0;
         }
     }
     }
@@ -92,6 +100,7 @@
     width: 33%;
     &.rightBox{
         text-align: right;
+        padding-bottom: 30px;
     }
     p{
         margin: 20px 0 30px;
@@ -150,6 +159,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 70vh;
+    overflow: hidden;
 }
 // banner ends
 

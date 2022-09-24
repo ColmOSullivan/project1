@@ -78,7 +78,7 @@ h1 {
   background-size: cover;
   height: 100vh;
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .contactHeader {
     height: auto;
   }
@@ -101,7 +101,7 @@ h1 {
   right: 0;
   bottom: -100px;
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .heroImg {
     display: none;
   }
@@ -130,6 +130,8 @@ nav a {
   text-align: center;
   line-height: 29px;
   letter-spacing: 1px;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
 }
 nav a:hover {
   color: #86E0F9;
@@ -154,6 +156,69 @@ a {
   text-decoration: none;
 }
 
+.bar {
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #FFFFFF;
+}
+
+@media (max-width: 1000px) {
+  .hamburgerMenu {
+    display: none;
+  }
+}
+@media (max-width: 810px) {
+  .navBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .hamburgerMenu {
+    display: block;
+    position: fixed;
+    padding-top: 50px;
+    padding-right: 50px;
+    z-index: 99999;
+  }
+  .hamburgerMenu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburgerMenu.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .hamburgerMenu.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
+  .navList {
+    position: fixed;
+    left: 100%;
+    top: 45px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgb(26, 26, 26);
+    width: 100%;
+    text-align: end;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .navItem {
+    margin: 16px 0;
+  }
+  .navList.active {
+    left: 0;
+  }
+}
 .aboutSection {
   background-color: #0C1423;
   padding: 100px 0px;
@@ -190,6 +255,11 @@ a {
 .newsSection {
   background-color: #0F614E;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .newsBox {
@@ -223,12 +293,16 @@ a {
   -webkit-box-shadow: -30px 30px 0px 0px #86E0F9;
           box-shadow: -30px 30px 0px 0px #86E0F9;
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .newsBox .leftImage {
     position: none;
+    top: 0;
+    left: 0;
   }
   .newsBox .rightImage {
     position: none;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -255,13 +329,14 @@ a {
 }
 .newsText.rightBox {
   text-align: right;
+  padding-bottom: 30px;
 }
 .newsText p {
   margin: 20px 0 30px;
   line-height: 32px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .newsTopRow {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -324,6 +399,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   height: 70vh;
+  overflow: hidden;
 }
 
 .profileSection {
@@ -395,7 +471,7 @@ a {
           flex-direction: column;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .cardContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -410,7 +486,7 @@ a {
     max-width: 50%;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .iconContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -424,7 +500,7 @@ a {
     width: 90%;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .profileContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -469,7 +545,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .blogWrap {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -499,20 +575,19 @@ a {
   width: 30%;
   padding: 100px 0;
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .blogAside {
     width: 100%;
     padding: 50px 20px;
   }
 }
 .blogAside img {
-  width: 120%;
   position: relative;
   top: -22px;
   left: -64px;
   border: none;
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .blogAside img {
     width: 100%;
     position: none;
@@ -539,7 +614,7 @@ a {
   width: 60%;
   margin-top: -430px;
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .blogSection {
     width: 100%;
     padding: 50px 20px;
@@ -706,7 +781,7 @@ a {
   width: 70%;
   margin-top: -700px;
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .formSection {
     padding: 0 0 50px 0;
   }
@@ -731,7 +806,7 @@ a {
   background-color: #0F614E;
   padding: 100px;
 }
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .contactForm fieldset .fieldSetWrapper {
     padding: 24px;
   }
@@ -772,7 +847,7 @@ a {
   margin: 20px 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 810px) {
   .contact {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -790,6 +865,9 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .asideContactContainer {
+    padding-bottom: 30px;
   }
 }
 footer {
