@@ -30,6 +30,7 @@
   }
 
 //   about section ends
+
 // News section begins
 .newsSection {
     background-color: $secondaryColor;
@@ -37,6 +38,54 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+
+.modalOne{
+    position: relative;
+    background-color: $secondaryColor;
+    max-width: 600px;
+    min-width: 150px;
+    padding: 15px;
+    text-align: center;
+    margin: -50px auto 0 auto;
+    border-radius: 5px;
+    z-index: 4;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    box-shadow: 0 0 5px 1px grey;
+    transition: all 0.25s ease;
+}
+
+.modalOne::before {
+    content: '';
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+.modalTwo{
+    position: relative;
+    background-color: #3D3D3D;
+    max-width: 600px;
+    min-width: 150px;
+    padding: 15px;
+    text-align: center;
+    margin: -50px auto 0 auto;
+    border-radius: 5px;
+    z-index: 4;
+    visibility: hidden;
+    opacity: 0;
+     cursor: pointer;
+     box-shadow: 0 0 5px 1px grey;
+    transition: all 0.25s ease;
+    
+}
+
 
 .newsBox{
     display: flex;
@@ -46,10 +95,16 @@
         width: 100%;
         overflow: hidden;
     }
+    .imageContainer .rightImage {
+        max-width: 50%;
+      }
+      .imageContainer .leftImage {
+        max-width: 50%;
+      }
     .leftImage{
         position: relative;
         top: -30px;
-        left: -100px;
+        // left: -100px;
         img{
             
             box-shadow: 30px 30px $blueBox;
@@ -58,7 +113,7 @@
     .rightImage{
         position: relative;
         bottom: -30px;
-        right: -100px;
+        // right: -100px;
     img{
         
         box-shadow: -30px 30px 0px 0px $blueBox;
@@ -66,31 +121,32 @@
     }
     @media (max-width: $tablet){
         .leftImage{
-            position: none;
+            position: unset;
             top: 0;
             left: 0;
         }
         .rightImage{
-            position: none;
+            position: unset;
             bottom: 0;
             right: 0;
         }
     }
     }
-    
 
-    
-
-// text box styling and sizing
+// // text box styling and sizing
 .newsTopRow{
-    justify-content: space-evenly;
+    justify-content: space-between;
+    
     .newsText{
         margin-top: 60px;
     }
 }
 
+ 
+
 .newsBottomRow{
-    justify-content: space-evenly;
+    justify-content: space-between;
+    
     .newsText{
         margin-top: 60px;
     }
@@ -107,11 +163,14 @@
         line-height: 32px;
     }
 }
-// Media Queries-News Section
-@media (max-width: $tablet){
+// // Media Queries-News Section
+@media (max-width: 1240px){
     .newsTopRow{
         flex-direction: column;
         align-items: center;
+        .imageContainer{
+            max-width: 100%;
+        }
     }
     .newsBottomRow{
         flex-direction: column;
@@ -122,6 +181,8 @@
         width: 90%;
     }
 }
+
+
 // Icon section
 
 .iconSection{
@@ -151,6 +212,19 @@
     }
     
 }
+
+
+// Media Queries-Icon Section
+@media (max-width: $tablet){
+    .iconContainer{
+        flex-direction: column;
+        align-items: center;
+        .flexIcon{
+            width: 90%;
+        }
+    }
+}
+
 // Icon ends
 // banner
 .sharkBreak{
@@ -197,6 +271,24 @@
         padding-bottom: 50px;
     }
 }
+
+// Media Queries-Profile Section
+@media (max-width: $tablet){
+    .profileContainer{
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        .profileImage {
+            margin-bottom: 15px;
+          }
+          .profileText{
+            text-align: left;
+            h3{
+                text-align: center;
+            }
+          }
+    }
+}
 // profile section ends
 // card section begins
 
@@ -224,36 +316,6 @@
             margin: 10px 0;
             max-width: 50%;
         }
-    }
-}
-
-
-// Media Queries-Icon Section
-@media (max-width: $tablet){
-    .iconContainer{
-        flex-direction: column;
-        align-items: center;
-        .flexIcon{
-            width: 90%;
-        }
-    }
-}
-
-// Media Queries-Profile Section
-@media (max-width: $tablet){
-    .profileContainer{
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-        .profileImage {
-            margin-bottom: 15px;
-          }
-          .profileText{
-            text-align: left;
-            h3{
-                text-align: center;
-            }
-          }
     }
 }
 

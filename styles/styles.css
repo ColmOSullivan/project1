@@ -166,7 +166,7 @@ a {
   background-color: #FFFFFF;
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 810px) {
   .hamburgerMenu {
     display: none;
   }
@@ -262,6 +262,55 @@ a {
       flex-wrap: wrap;
 }
 
+.modalOne {
+  position: relative;
+  background-color: #0F614E;
+  max-width: 600px;
+  min-width: 150px;
+  padding: 15px;
+  text-align: center;
+  margin: -50px auto 0 auto;
+  border-radius: 5px;
+  z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px 1px grey;
+          box-shadow: 0 0 5px 1px grey;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.modalOne::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.modalTwo {
+  position: relative;
+  background-color: #3D3D3D;
+  max-width: 600px;
+  min-width: 150px;
+  padding: 15px;
+  text-align: center;
+  margin: -50px auto 0 auto;
+  border-radius: 5px;
+  z-index: 4;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px 1px grey;
+          box-shadow: 0 0 5px 1px grey;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
 .newsBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -275,10 +324,15 @@ a {
   width: 100%;
   overflow: hidden;
 }
+.newsBox .imageContainer .rightImage {
+  max-width: 50%;
+}
+.newsBox .imageContainer .leftImage {
+  max-width: 50%;
+}
 .newsBox .leftImage {
   position: relative;
   top: -30px;
-  left: -100px;
 }
 .newsBox .leftImage img {
   -webkit-box-shadow: 30px 30px #86E0F9;
@@ -287,7 +341,6 @@ a {
 .newsBox .rightImage {
   position: relative;
   bottom: -30px;
-  right: -100px;
 }
 .newsBox .rightImage img {
   -webkit-box-shadow: -30px 30px 0px 0px #86E0F9;
@@ -295,30 +348,30 @@ a {
 }
 @media (max-width: 810px) {
   .newsBox .leftImage {
-    position: none;
+    position: unset;
     top: 0;
     left: 0;
   }
   .newsBox .rightImage {
-    position: none;
+    position: unset;
     bottom: 0;
     right: 0;
   }
 }
 
 .newsTopRow {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .newsTopRow .newsText {
   margin-top: 60px;
 }
 
 .newsBottomRow {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .newsBottomRow .newsText {
   margin-top: 60px;
@@ -336,7 +389,7 @@ a {
   line-height: 32px;
 }
 
-@media (max-width: 810px) {
+@media (max-width: 1240px) {
   .newsTopRow {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -345,6 +398,9 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .newsTopRow .imageContainer {
+    max-width: 100%;
   }
   .newsBottomRow {
     -webkit-box-orient: vertical;
@@ -393,6 +449,20 @@ a {
   font-size: 25px;
 }
 
+@media (max-width: 810px) {
+  .iconContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .iconContainer .flexIcon {
+    width: 90%;
+  }
+}
 .sharkBreak {
   background: url(../assets/images/banner.jpg);
   background-position: center;
@@ -441,6 +511,27 @@ a {
   padding-bottom: 50px;
 }
 
+@media (max-width: 810px) {
+  .profileContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+  }
+  .profileContainer .profileImage {
+    margin-bottom: 15px;
+  }
+  .profileContainer .profileText {
+    text-align: left;
+  }
+  .profileContainer .profileText h3 {
+    text-align: center;
+  }
+}
 .cardSection {
   background-color: #0F614E;
   display: -webkit-box;
@@ -484,41 +575,6 @@ a {
   .cardContainer .card {
     margin: 10px 0;
     max-width: 50%;
-  }
-}
-@media (max-width: 810px) {
-  .iconContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .iconContainer .flexIcon {
-    width: 90%;
-  }
-}
-@media (max-width: 810px) {
-  .profileContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 90%;
-  }
-  .profileContainer .profileImage {
-    margin-bottom: 15px;
-  }
-  .profileContainer .profileText {
-    text-align: left;
-  }
-  .profileContainer .profileText h3 {
-    text-align: center;
   }
 }
 .blogHeader {
@@ -582,7 +638,7 @@ a {
   }
 }
 .blogAside img {
-  position: relative;
+  position: unset;
   top: -22px;
   left: -64px;
   border: none;
@@ -918,9 +974,10 @@ a.findButton:focus {
   color: #FFFFFF;
 }
 
-a.readButton {
+button.readButtonOne {
   color: #FFFFFF;
   background-color: #0C1423;
+  font-family: "Barlow-Bold", sans-serif;
   padding: 10px 20px;
   margin: 20px 0;
   font-size: 20px;
@@ -930,11 +987,32 @@ a.readButton {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-a.readButton:hover {
+button.readButtonOne:hover {
   background-color: #86E0F9;
   color: #FFFFFF;
 }
-a.readButton:focus {
+button.readButtonOne:focus {
+  background-color: #86E0F9;
+  color: #FFFFFF;
+}
+button.readButtonTwo {
+  color: #FFFFFF;
+  background-color: #0C1423;
+  font-family: "Barlow-Bold", sans-serif;
+  padding: 10px 20px;
+  margin: 20px 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+button.readButtonTwo:hover {
+  background-color: #86E0F9;
+  color: #FFFFFF;
+}
+button.readButtonTwo:focus {
   background-color: #86E0F9;
   color: #FFFFFF;
 }

@@ -44,26 +44,47 @@ a{
   }
 }
 
-a{
-  &.readButton{
+button{
+  &.readButtonOne{
+    color: $white;
+    background-color: $primaryColor;
+    font-family: $headingFont;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+    transition: 0.3s;
+    &:hover{
+        background-color: $blueBox;
+        color: $white;
+    }
+    &:focus{
+        background-color: $blueBox;
+        color: $white;
+    }
+}
+&.readButtonTwo{
+  color: $white;
+  background-color: $primaryColor;
+  font-family: $headingFont;
+  padding: 10px 20px;
+  margin: 20px 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  transition: 0.3s;
+  &:hover{
+      background-color: $blueBox;
       color: $white;
-      background-color: $primaryColor;
-      padding: 10px 20px;
-      margin: 20px 0;
-      font-size: 20px;
-      text-transform: uppercase;
-      text-align: center;
-      border: none;
-      transition: 0.3s;
-      &:hover{
-          background-color: $blueBox;
-          color: $white;
-      }
-      &:focus{
-          background-color: $blueBox;
-          color: $white;
-      }
   }
+  &:focus{
+      background-color: $blueBox;
+      color: $white;
+  }
+}
 }
 /* UTILITY CLASSES END */
 
