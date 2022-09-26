@@ -262,55 +262,6 @@ a {
       flex-wrap: wrap;
 }
 
-.modalOne {
-  position: relative;
-  background-color: #0F614E;
-  max-width: 600px;
-  min-width: 150px;
-  padding: 15px;
-  text-align: center;
-  margin: -50px auto 0 auto;
-  border-radius: 5px;
-  z-index: 4;
-  visibility: hidden;
-  opacity: 0;
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 5px 1px grey;
-          box-shadow: 0 0 5px 1px grey;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-
-.modalOne::before {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.modalTwo {
-  position: relative;
-  background-color: #3D3D3D;
-  max-width: 600px;
-  min-width: 150px;
-  padding: 15px;
-  text-align: center;
-  margin: -50px auto 0 auto;
-  border-radius: 5px;
-  z-index: 4;
-  visibility: hidden;
-  opacity: 0;
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 5px 1px grey;
-          box-shadow: 0 0 5px 1px grey;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-
 .newsBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,6 +483,60 @@ a {
     text-align: center;
   }
 }
+.modal {
+  border: 2px solid #000;
+  width: 650px;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  border-radius: 4px;
+  z-index: 2;
+  background: #fff;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.modal-header {
+  font-family: "Barlow-Bold", sans-serif;
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #000;
+  padding-bottom: 20px;
+}
+
 .cardSection {
   background-color: #0F614E;
   display: -webkit-box;
@@ -1013,6 +1018,28 @@ button.readButtonTwo:hover {
   color: #FFFFFF;
 }
 button.readButtonTwo:focus {
+  background-color: #86E0F9;
+  color: #FFFFFF;
+}
+
+button.findButton {
+  color: #0C1423;
+  background-color: #86E0F9;
+  padding: 10px 20px;
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+button.findButton:hover {
+  background-color: #0F614E;
+  color: #FFFFFF;
+}
+button.findButton:focus {
   background-color: #86E0F9;
   color: #FFFFFF;
 }
