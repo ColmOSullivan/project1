@@ -11,8 +11,11 @@ $footerFont:"Lato-Regular", sans-serif;
 
 
 // breakpoints
-
+$wideDesktop:"1500px";
 $desktop:"1000px";
 $tablet:"810px";
 $mobile:"500px";
+
+$zIndexSmall:1;
+$zIndexBig:9999;
 

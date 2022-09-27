@@ -23,38 +23,39 @@ function sharkFact2(){
 }
 
 // modal button
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay');
 
-const openModal = document.querySelectorAll("[data-modal-target]");
-const closeModalButton = document.querySelectorAll("[data-modal-closer]");
-console.log()
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget)
+        openModal(modal)
+    })
+})
 
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+      closeModal(modal)
+    })
+  })
 
-openModal.forEach(function (cButton){
-    cButton.addEventListener("click", function (){
-        const modal = document.querySelector(cButton.CDATA_SECTION_NODE.modalTarget);
-        myModal(modal);
-    });
-});
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        closeModal(modal)
+    })
+})
 
-function myModal(modal){
-    if (modal == null){
-        return;
-    }
-    modal.classList.add("show");
-    document.querySelector("body").classList.add("overlay");
+function openModal(modal) {
+    if (modal == null) return
+    modal.classList.add('active')
+    overlay.classList.add('active')
 }
 
-closeModalButton.forEach(function (closeModalButton){
-    closeModalButton.addEventListener("click", function(){
-        const currentModal = closeModalButton.closest(".modal");
-        closeModalButton(currentModal);
-    });
-});
-
-function closeModal(currentModal){
-    if (currentModal == null){
-        return;
-    }
-    currentModal.classList.remove("show");
-    document.querySelector("body").classList.remove("overlay")
+function closeModal(modal) {
+    if (modal == null) return
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
 }

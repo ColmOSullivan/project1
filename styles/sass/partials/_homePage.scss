@@ -86,26 +86,21 @@
     }
 
 // // text box styling and sizing
-.newsTopRow{
+.newsRow{
     justify-content: space-between;
-    
-    .newsText{
-        margin-top: 60px;
+    @media (min-width: $wideDesktop) {
+        justify-content:space-around;
     }
 }
 
  
 
-.newsBottomRow{
-    justify-content: space-between;
-    
-    .newsText{
-        margin-top: 60px;
-    }
-}
+
 
 .newsText{
-    width: 33%;
+    margin-top: 60px;
+    max-width: 50%;
+    padding: 0 50px;
     &.rightBox{
         text-align: right;
         padding-bottom: 30px;
@@ -116,21 +111,21 @@
     }
 }
 // // Media Queries-News Section
-@media (max-width: 1240px){
-    .newsTopRow{
+@media (max-width:$tablet){
+    .newsRow{
         flex-direction: column;
         align-items: center;
         .imageContainer{
             max-width: 100%;
         }
     }
-    .newsBottomRow{
+    .newsRow{
         flex-direction: column;
         align-items: center;
         margin-top: 10px;
     }
     .newsText{
-        width: 90%;
+        max-width: 100%;
     }
 }
 
@@ -222,6 +217,10 @@
         line-height: 32px;
         padding-bottom: 50px;
     }
+    h5{
+        font-size: 1.25rem;
+        text-transform: uppercase;
+    }
 }
 
 // Media Queries-Profile Section
@@ -243,51 +242,68 @@
 }
 
 // modal styling.
-.modal {
-    border: 2px solid #000;
-    width: 650px;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    /* display: none; */
-    opacity: 0;
-    visibility: hidden;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    border-radius: 4px;
-    z-index: 2;
-    background: #fff;
-    transition: 0.2s ease-in-out all;
-  }
+    .modal{
+        // change position later, likely to relative or absolute.
+        position: fixed;
+        top: 7%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 200ms ease-in-out;
+        border: 1px solid black;
+        border-radius: 10px;
+        z-index: 10;
+        background-color: $white;
+        width: 500px;
+        max-width: 80%;
+    }
 
-  .modal.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  .overlay::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-  }
-  
-  .modal-header {
-    font-family: $headingFont;
-    font-size: 25px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid #000;
-    padding-bottom: 20px;
-  }
+    .modal.active{
+        transform: translate(-50%, 50%) scale(1);
+    }
+
+    .modalHeader{
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        .title{
+            font: size 1.25rem;
+            color: black;
+            font-family: $headingFont;
+        }
+        .closeButton{
+            color: black;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+    }
+
+    .modelBody{
+        font-family: $bodyFont;
+        padding: 10px 15px;
+        color: black;
+    }  
+
+    #overlay{
+        position: fixed;
+        opacity: 0;
+        transition: 200ms ease-in-out;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .5);
+        pointer-events: none;
+    }
+
+    #overlay.active{
+        opacity: 1;
+        pointer-events: all;
+    }
 
 // profile section ends
 // card section begins

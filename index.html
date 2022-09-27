@@ -83,7 +83,7 @@
         <!-- <div class="wrapper"> -->
         <div class="newsContainer">
           <div class="newsBox">
-            <div class="newsTopRow flexContainer">
+            <div class="newsRow flexContainer">
               <div class="imageContainer leftImage">
                 <img
                   src="./assets/images/left-image.jpg"
@@ -105,7 +105,7 @@
               </div>
             </div>
             <!-- .newsText ends -->
-            <div class="newsBottomRow flexContainer">
+            <div class="newsRow flexContainer">
               <div class="newsText rightBox">
                 <h4>Meet real Nemo</h4>
                 <p>
@@ -214,34 +214,28 @@
                 consequatur, esse eaque hic expedita nemo blanditiis iste?
                 Assumenda veritatis labore officia voluptates itaque.
               </p>
-              <button
-                type="button"
-                class="findButton"
-                data-modal-target="#modal"
-              >
+              <button data-modal-target="#modal" class="findButton">
                 Find out more
               </button>
-              <div id="modal" class="modal">
-                <div class="modal-header">
-                  Wow! More facts about sharks!
-                  <button type="button" data-modal-closer>
-                    Close shark facts
-                  </button>
+              <div class="modal" id="modal">
+                <div class="modalHeader">
+                  <div class="title"><h5>Even more shark facts!</h5></div>
+                  <button data-close-button class="closeButton">&times;</button>
+                </div>
+                <div class="modelBody">
                   <p>
                     So you're looking for more fish facts? Well, you're in luck!
-                    Unfortunately I only know shark facts, I hope that's okay.
-                    My mother always told me "You'll never get anywhere in life
-                    talking to people about sharks". Haha, if only she could see
-                    me now, writing facts about sharks on an aquarium website.
-                    LOOK AT ME NOW MOM.<br />Did you know that whale sharks are
-                    the biggest fish in the ocean? They can grow to be 12.4
-                    meters long and weigh as much as 40 tons! They all have a
-                    pattern of spots that is as unique as a fingerprint.
+                    Unfortunately I only know shark facts, I hope that's
+                    okay.<br />Did you know that whale sharks are the biggest
+                    fish in the ocean? They can grow to be 12.4 meters long and
+                    weigh as much as 40 tons! They all have a pattern of spots
+                    that is as unique as a fingerprint.
                   </p>
                 </div>
-                <!-- .modal-header ends -->
+                <!-- .modelBody ends -->
               </div>
               <!-- .modal ends -->
+              <div id="overlay"></div>
             </div>
             <!-- .profileText ends -->
           </div>

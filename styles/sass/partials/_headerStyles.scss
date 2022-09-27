@@ -36,7 +36,8 @@ h1 {
 
   .heroHead{
     width: 40%;
-    z-index: 1;
+    z-index: $zIndexSmall;
+  
   }
 
   .heroImg{
@@ -147,6 +148,7 @@ h1 {
     
     .navList.active{
       left: 0;
+      z-index: $zIndexBig;
     }
   }
 
