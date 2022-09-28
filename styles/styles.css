@@ -220,6 +220,66 @@ a {
     z-index: 9999;
   }
 }
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: none;
+  -webkit-animation: modal-open 0.5s;
+          animation: modal-open 0.5s;
+}
+
+.modalContent {
+  background: #0C1423;
+  margin-top: 100px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 24px;
+  border-radius: 4px;
+  z-index: 4;
+}
+.modalContent .modalHeader {
+  text-align: center;
+  font-weight: 500;
+  padding: 10px 0;
+  font-size: 26px;
+}
+.modalContent .modalHeader h5 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+.modalContent .modalBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 0;
+}
+.modalContent .modalBody p {
+  width: 90%;
+  text-align: center;
+}
+.modalContent .modalFooter {
+  text-align: center;
+  padding: 15px 0;
+}
+.modalContent .modalFooter .modalClose {
+  padding: 8px 16px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: #0F614E;
+  color: #FFFFFF;
+}
+
 .aboutSection {
   background-color: #0C1423;
   padding: 100px 0px;
@@ -458,10 +518,6 @@ a {
   line-height: 32px;
   padding-bottom: 50px;
 }
-.profileText h5 {
-  font-size: 1.25rem;
-  text-transform: uppercase;
-}
 
 @media (max-width: 810px) {
   .profileContainer {
@@ -484,76 +540,6 @@ a {
     text-align: center;
   }
 }
-.modal {
-  position: fixed;
-  top: 7%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(0);
-          transform: translate(-50%, -50%) scale(0);
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
-  border: 1px solid black;
-  border-radius: 10px;
-  z-index: 10;
-  background-color: #FFFFFF;
-  width: 500px;
-  max-width: 80%;
-}
-
-.modal.active {
-  -webkit-transform: translate(-50%, 50%) scale(1);
-          transform: translate(-50%, 50%) scale(1);
-}
-
-.modalHeader {
-  padding: 10px 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 1px solid black;
-}
-.modalHeader .title {
-  font: size 1.25rem;
-  color: black;
-  font-family: "Barlow-Bold", sans-serif;
-}
-.modalHeader .closeButton {
-  color: black;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.modelBody {
-  font-family: "Lato-Regular", sans-serif;
-  padding: 10px 15px;
-  color: black;
-}
-
-#overlay {
-  position: fixed;
-  opacity: 0;
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  pointer-events: none;
-}
-
-#overlay.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
 .cardSection {
   background-color: #0F614E;
   display: -webkit-box;

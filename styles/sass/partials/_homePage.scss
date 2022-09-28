@@ -1,5 +1,62 @@
 @use "variables" as *;
 
+// modal styling.
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+    animation: modal-open 0.5s;
+  }
+  
+  .modalContent {
+    background: $primaryColor;
+    margin-top: 100px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 24px;
+    border-radius: 4px;
+    z-index: 4;
+    .modalHeader {
+        text-align: center;
+        font-weight: 500;
+        padding: 10px 0;
+        font-size: 26px;
+        h5{
+            font-size: 1.25rem;
+            text-transform: uppercase;
+        }
+      }
+      .modalBody {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+        p{
+            width: 90%;
+            text-align: center;
+        }
+      }
+      .modalFooter {
+        text-align: center;
+        padding: 15px 0;
+        .modalClose {
+            padding: 8px 16px;
+            font-size: 14px;
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            background-color: $secondaryColor;
+            color: $white;
+          }
+      }
+  }
+
 // about section
 
  .aboutSection{
@@ -217,10 +274,7 @@
         line-height: 32px;
         padding-bottom: 50px;
     }
-    h5{
-        font-size: 1.25rem;
-        text-transform: uppercase;
-    }
+    
 }
 
 // Media Queries-Profile Section
@@ -240,70 +294,6 @@
           }
     }
 }
-
-// modal styling.
-    .modal{
-        // change position later, likely to relative or absolute.
-        position: fixed;
-        top: 7%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        transition: 200ms ease-in-out;
-        border: 1px solid black;
-        border-radius: 10px;
-        z-index: 10;
-        background-color: $white;
-        width: 500px;
-        max-width: 80%;
-    }
-
-    .modal.active{
-        transform: translate(-50%, 50%) scale(1);
-    }
-
-    .modalHeader{
-        padding: 10px 15px;
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid black;
-        .title{
-            font: size 1.25rem;
-            color: black;
-            font-family: $headingFont;
-        }
-        .closeButton{
-            color: black;
-            cursor: pointer;
-            border: none;
-            outline: none;
-            background: none;
-            font-size: 1.25rem;
-            font-weight: bold;
-        }
-    }
-
-    .modelBody{
-        font-family: $bodyFont;
-        padding: 10px 15px;
-        color: black;
-    }  
-
-    #overlay{
-        position: fixed;
-        opacity: 0;
-        transition: 200ms ease-in-out;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, .5);
-        pointer-events: none;
-    }
-
-    #overlay.active{
-        opacity: 1;
-        pointer-events: all;
-    }
 
 // profile section ends
 // card section begins

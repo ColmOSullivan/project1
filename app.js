@@ -23,39 +23,25 @@ function sharkFact2(){
 }
 
 // modal button
-const openModalButtons = document.querySelectorAll('[data-modal-target]');
-const closeModalButtons = document.querySelectorAll('[data-close-button]');
-const overlay = document.getElementById('overlay');
+var modalBtns = document.querySelectorAll(".modalOpen");
 
-openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget)
-        openModal(modal)
-    })
-})
+modalBtns.forEach(function(btn) {
+  btn.onclick = function() {
+    var modal = btn.getAttribute("data-modal");
+    document.getElementById(modal).style.display = "block";
+  };
+});
 
-overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.active')
-    modals.forEach(modal => {
-      closeModal(modal)
-    })
-  })
+var closeBtns = document.querySelectorAll('.modalClose');
 
-closeModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = button.closest('.modal');
-        closeModal(modal)
-    })
-})
+closeBtns.forEach(function(btn) {
+  btn.onclick = function(){
+    var modal = (btn.closest(".modal").style.display="none");
+  };
+});
 
-function openModal(modal) {
-    if (modal == null) return
-    modal.classList.add('active')
-    overlay.classList.add('active')
-}
-
-function closeModal(modal) {
-    if (modal == null) return
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
+window.onclick = function(event){
+    if(event.target.className === 'modal'){
+        event.target.style.display = "none";
+    }
 }

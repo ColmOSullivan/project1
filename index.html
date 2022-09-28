@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Lato&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/77fbeab9e1.js"
       crossorigin="anonymous"
@@ -72,12 +76,37 @@
                 enim sequi perspiciatis quisquam dolor. Lorem ipsum dolor sit
                 amet consectetur adipisicing elit. Lorem ipsum dolor sit.
               </p>
-              <a class="findButton" href="./blog.html">Find out more</a>
+              <button class="modalOpen findButton" data-modal="modal1">
+                Find out more
+              </button>
+              <!-- MODAL ONE -->
+              <div class="modal" id="modal1">
+                <div class="modalContent">
+                  <div class="modalHeader title">
+                    <h5>Welcome to Shark facts!</h5>
+                  </div>
+                  <div class="modalBody">
+                    <p>
+                      Hammerhead sharks may look strange, but it gives them an
+                      evolutionary advantage! Their head contains 3,000 ampullar
+                      pores that allow them to pick up electrical fields in the
+                      ocean. They also have 360 degree vision. Neat!
+                    </p>
+                  </div>
+                  <div class="modalFooter">
+                    <button class="link modalClose">Close Modal</button>
+                  </div>
+                </div>
+              </div>
+              <!-- MODAL ONE ENDS -->
             </div>
+            <!-- .aboutText ends -->
           </div>
+          <!-- .aboutContainer ends -->
         </div>
         <!-- .wrapper end -->
       </section>
+      <!-- .aboutSection ends -->
 
       <section class="newsSection">
         <!-- <div class="wrapper"> -->
@@ -214,28 +243,29 @@
                 consequatur, esse eaque hic expedita nemo blanditiis iste?
                 Assumenda veritatis labore officia voluptates itaque.
               </p>
-              <button data-modal-target="#modal" class="findButton">
+              <button class="modalOpen findButton" data-modal="modal2">
                 Find out more
               </button>
-              <div class="modal" id="modal">
-                <div class="modalHeader">
-                  <div class="title"><h5>Even more shark facts!</h5></div>
-                  <button data-close-button class="closeButton">&times;</button>
+              <div class="modal" id="modal2">
+                <div class="modalContent">
+                  <div class="modalHeader title">
+                    <h5>Even more shark facts!</h5>
+                  </div>
+                  <div class="modalBody">
+                    <p>
+                      So you're looking for more fish facts? Well, you're in
+                      luck! Unfortunately I only know shark facts, I hope that's
+                      okay.<br />Did you know that whale sharks are the biggest
+                      fish in the ocean? They can grow to be 12.4 meters long
+                      and weigh as much as 40 tons! They all have a pattern of
+                      spots that is as unique as a fingerprint.
+                    </p>
+                  </div>
+                  <div class="modalFooter">
+                    <button class="link modalClose">Close Modal</button>
+                  </div>
                 </div>
-                <div class="modelBody">
-                  <p>
-                    So you're looking for more fish facts? Well, you're in luck!
-                    Unfortunately I only know shark facts, I hope that's
-                    okay.<br />Did you know that whale sharks are the biggest
-                    fish in the ocean? They can grow to be 12.4 meters long and
-                    weigh as much as 40 tons! They all have a pattern of spots
-                    that is as unique as a fingerprint.
-                  </p>
-                </div>
-                <!-- .modelBody ends -->
               </div>
-              <!-- .modal ends -->
-              <div id="overlay"></div>
             </div>
             <!-- .profileText ends -->
           </div>
