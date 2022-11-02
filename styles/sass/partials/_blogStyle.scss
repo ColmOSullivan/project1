@@ -47,12 +47,13 @@
     width: 30%;
     padding: 100px 0;
     @media (max-width: $tablet){
+        
         width: 100%;
         padding: 50px 20px;
     }
     img{
-        width: 120%;
-        position: relative;
+        
+        position: unset;
         top: -22px;
         left: -64px;
         border: none;

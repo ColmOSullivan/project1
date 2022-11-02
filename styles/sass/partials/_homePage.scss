@@ -1,5 +1,62 @@
 @use "variables" as *;
 
+// modal styling.
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+    animation: modal-open 0.5s;
+  }
+  
+  .modalContent {
+    background: $primaryColor;
+    margin-top: 100px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 24px;
+    border-radius: 4px;
+    z-index: 4;
+    .modalHeader {
+        text-align: center;
+        font-weight: 500;
+        padding: 10px 0;
+        font-size: 26px;
+        h5{
+            font-size: 1.25rem;
+            text-transform: uppercase;
+        }
+      }
+      .modalBody {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+        p{
+            width: 90%;
+            text-align: center;
+        }
+      }
+      .modalFooter {
+        text-align: center;
+        padding: 15px 0;
+        .modalClose {
+            padding: 8px 16px;
+            font-size: 14px;
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            background-color: $secondaryColor;
+            color: $white;
+          }
+      }
+  }
+
 // about section
 
  .aboutSection{
@@ -30,10 +87,13 @@
   }
 
 //   about section ends
+
 // News section begins
 .newsSection {
     background-color: $secondaryColor;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .newsBox{
@@ -44,75 +104,89 @@
         width: 100%;
         overflow: hidden;
     }
+    .imageContainer .rightImage {
+        max-width: 50%;
+      }
+      .imageContainer .leftImage {
+        max-width: 50%;
+      }
     .leftImage{
         position: relative;
         top: -30px;
-        left: -100px;
+        // left: -100px;
         img{
+            
             box-shadow: 30px 30px $blueBox;
         }
     }
     .rightImage{
         position: relative;
         bottom: -30px;
-        right: -100px;
+        // right: -100px;
     img{
+        
         box-shadow: -30px 30px 0px 0px $blueBox;
     }
     }
     @media (max-width: $tablet){
         .leftImage{
-            position: none;
+            position: unset;
+            top: 0;
+            left: 0;
         }
         .rightImage{
-            position: none;
+            position: unset;
+            bottom: 0;
+            right: 0;
         }
     }
     }
-    
 
-    
-
-// text box styling and sizing
-.newsTopRow{
-    justify-content: space-evenly;
-    .newsText{
-        margin-top: 60px;
+// // text box styling and sizing
+.newsRow{
+    justify-content: space-between;
+    @media (min-width: $wideDesktop) {
+        justify-content:space-around;
     }
 }
 
-.newsBottomRow{
-    justify-content: space-evenly;
-    .newsText{
-        margin-top: 60px;
-    }
-}
+ 
+
+
 
 .newsText{
-    width: 33%;
+    margin-top: 60px;
+    max-width: 50%;
+    padding: 0 50px;
     &.rightBox{
         text-align: right;
+        padding-bottom: 30px;
     }
     p{
         margin: 20px 0 30px;
         line-height: 32px;
     }
 }
-// Media Queries-News Section
-@media (max-width: $tablet){
-    .newsTopRow{
+// // Media Queries-News Section
+@media (max-width:$tablet){
+    .newsRow{
         flex-direction: column;
         align-items: center;
+        .imageContainer{
+            max-width: 100%;
+        }
     }
-    .newsBottomRow{
+    .newsRow{
         flex-direction: column;
         align-items: center;
         margin-top: 10px;
     }
     .newsText{
-        width: 90%;
+        max-width: 100%;
     }
 }
+
+
 // Icon section
 
 .iconSection{
@@ -142,6 +216,19 @@
     }
     
 }
+
+
+// Media Queries-Icon Section
+@media (max-width: $tablet){
+    .iconContainer{
+        flex-direction: column;
+        align-items: center;
+        .flexIcon{
+            width: 90%;
+        }
+    }
+}
+
 // Icon ends
 // banner
 .sharkBreak{
@@ -150,6 +237,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 70vh;
+    overflow: hidden;
 }
 // banner ends
 
@@ -186,7 +274,27 @@
         line-height: 32px;
         padding-bottom: 50px;
     }
+    
 }
+
+// Media Queries-Profile Section
+@media (max-width: $tablet){
+    .profileContainer{
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        .profileImage {
+            margin-bottom: 15px;
+          }
+          .profileText{
+            text-align: left;
+            h3{
+                text-align: center;
+            }
+          }
+    }
+}
+
 // profile section ends
 // card section begins
 
@@ -214,36 +322,6 @@
             margin: 10px 0;
             max-width: 50%;
         }
-    }
-}
-
-
-// Media Queries-Icon Section
-@media (max-width: $tablet){
-    .iconContainer{
-        flex-direction: column;
-        align-items: center;
-        .flexIcon{
-            width: 90%;
-        }
-    }
-}
-
-// Media Queries-Profile Section
-@media (max-width: $tablet){
-    .profileContainer{
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-        .profileImage {
-            margin-bottom: 15px;
-          }
-          .profileText{
-            text-align: left;
-            h3{
-                text-align: center;
-            }
-          }
     }
 }
 
